@@ -35,7 +35,7 @@ nginx安装路径假设为:/usr/local/nginx/conf/
 
 
     	access_by_lua_file /usr/local/nginx/conf/waf/waf.lua;
-#独立定制接口接口
+#独立定制接口
     	access_by_lua_file /usr/local/nginx/conf/waf/AccessUrl.lua;
 
 配置config.lua里的waf规则目录(一般在waf/conf/目录下)

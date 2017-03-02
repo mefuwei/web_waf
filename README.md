@@ -2,7 +2,7 @@
 
 web是我入职好贷网时候开发的一个基于ngx_lua的web应用防火墙。
 
-代码很简单，开发初衷主要是使用简单，高性能和轻量级。
+开发初衷主要是使用简单，高性能和轻量级。
 
 ###用途：
 	防止sql注入，本地包含，部分溢出,xss,SSRF等web攻击
@@ -81,7 +81,7 @@ nginx安装路径假设为:/usr/local/nginx/conf/
 
 部署完毕可以尝试如下命令：        
   
-        curl http://xxxx/test.php?id=../etc/passwd
+        curl http://domain.com?id=../etc/passwd
         返回"Please go away~~"字样，说明规则生效。
 
 注意:默认，本机在白名单不过滤，可自行调整config.lua配置
@@ -104,13 +104,8 @@ nginx安装路径假设为:/usr/local/nginx/conf/
 		whitelist是白名单，里面的url匹配到不做过滤		
 		user-agent是对user-agent的过滤规则
 
-	默认开启了get和post过滤，需要开启cookie过滤的，编辑waf.lua取消部分--注释即可
+	默认开启了get和post过滤，需要开启cookie过滤的，编辑CookieMatch即可
 	
 	日志文件名称格式如下:虚拟主机名_sec.log
 
-
-## Copyright
-
-
-	
 感谢ngx_lua模块的开发者章亦春(https://openresty.org/cn/)
